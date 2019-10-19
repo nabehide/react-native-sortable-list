@@ -111,6 +111,7 @@ export default class SortableList extends Component {
         });
       });
 
+      /*
       if (Object.keys(nextData).length > Object.keys(data).length) {
         this.setState({
           animated: false,
@@ -125,6 +126,14 @@ export default class SortableList extends Component {
           order: nextOrder
         });
       }
+      */
+      this.setState({
+        animated: false,
+        data: nextData,
+        containerLayout: null,
+        rowsLayouts: null,
+        order: nextOrder
+      });
 
     } else if (order && nextOrder && !shallowEqual(order, nextOrder)) {
       this.setState({order: nextOrder});
